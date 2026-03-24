@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import {
   ChevronDown,
   Home,
-  Hammer,
+  ListTodo,
   Settings,
   Users,
 } from "lucide-react";
@@ -25,14 +25,10 @@ type NavItem = {
 
 const sections: { title: string; items: NavItem[] }[] = [
   {
-    title: "Platform",
+    title: "Main",
     items: [
-      { label: "Overview", href: "/dashboard", icon: Home },
-      {
-        label: "Feature",
-        href: "/dashboard/feature",
-        icon: Hammer,
-      },
+      { label: "Dashboard", href: "/dashboard", icon: Home },
+      { label: "To-Do Lists", href: "/dashboard/lists", icon: ListTodo },
     ],
   },
   {
